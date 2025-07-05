@@ -6,6 +6,7 @@
     <link rel="shortcut icon" type="x-icon" href="">
     <meta name="viewport" content="width=device-width" initial-scale="1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <style>
@@ -38,9 +39,14 @@
         text-decoration: none;
         color: rgb(231, 22, 22) !important;
     }
+    a {
+        font-size:30px;
+        color: #6228d7;
+    }
     .nav-link{
         color: aliceblue;
         transition-timing-function: ease-in;
+        font-size:larger ;
         transition: font-size 2s;
         transition-duration: 3sec;
         font-size: 1.5vw;
@@ -49,7 +55,7 @@
     }
     .nav-link:hover{
         color:aqua;
-        font-size: 2.2vw;
+        font-size: 1.6vw;
      
     }
     .fakeimg{
@@ -67,10 +73,94 @@
         transition-timing-function: ease-in-out;
     }
     button.card-text:hover{
-        box-shadow: 1px 1px 5px 1px rgb(48, 31, 25);
+        box-shadow: 1px 1px 5px 1px rgb(95, 64, 53);
+    }
+    #restaurant{
+        border-radius: 10px;
+        box-shadow: 1px 2px 10px 1px rgb(88, 60, 60);
+    
+    }
+    /*Contact form*/
+    #name {
+        background: rgb(21, 21, 0);
+        color:#f7ecec;
+        font-weight: 500;
+        border: none;
+        outline: none;
+        border-radius: 50px;
+
+    }
+     #email {
+        background: rgb(21, 21, 0);
+        color: aliceblue;
+    }
+    .input-group-text{
+        background: rgb(21,21,0);
+        color: aliceblue;
+    }
+    #email::placeholder,#comment::placeholder,#name::placeholder{
+        color: #f7ecec;
+        font-weight: 500;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+    }
+    #comment{
+        background: red;
     }
 
-
+/**socials**/
+a .fa{
+    
+}
+       .fa-facebook{
+            background: #1877f2;
+            color: white;
+            border-radius: 15%;
+            width: 30px;
+            padding: 3px;
+            
+        }
+        .fa-instagram{
+            background-image: repeating-linear-gradient(10deg,#f9ce34 35%,#ee2a7b 40%,#6228d7 25%);
+            border-radius: 15%;
+            width: 35px;
+            padding: 3px;
+        }
+        .fa-whatsapp{
+            color:white;
+            background: greenyellow;
+            border-radius: 15%;
+            width: 35px;
+            padding: 3px
+        }
+        .fa-phone{
+            padding-right: 5px;
+            background: #1877f2;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        .phone{
+            color: #d1e7ec;
+            transition: color 1s;
+            transition-timing-function: ease-in-out;
+        }
+        .phone:hover{
+            color: aquamarine;
+        }
+       .submit{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 500;
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 16px;
+            color:#fff;
+            gap: 10px;
+            border: none;
+            border-radius: 50px;
+            background-image: linear-gradient(270deg,red,rgb(100, 190, 229));
+            box-shadow: 2px px 10px rgb(100, 190, 229);
+       }
 </style>
 </head>
 <body>
@@ -84,7 +174,7 @@
     </div>
     <div class="home container-fluid bg-dark text-white">
         <body data-bs-spy="scroll"data-bs-target=".navbar" data-bs-offset="10">
-            <nav class="navbar navbar-expand-sm nav-bar bg-gray text-bg-danger sticky-top">
+            <nav class="navbar navbar-expand-md nav-bar bg-gray text-bg-danger sticky-top">
                 <div class="container-fluid justify-content-center">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -97,7 +187,7 @@
                         <a class="nav-link" href="#conference">Conference</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#rooms">Rooms</a>
+                        <a class="nav-link" href="#accomodation">Accomodation</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="#contact">Contacts</a>
@@ -105,13 +195,13 @@
                     </ul> 
                 </div>
             </nav>
-            <div id="home" class="container mt-1 bg-success text-white">
+            <div id="home" class="container-fluid my-1 py-1 text-white rounded-1">
                 <h4 class="d-flex justify-content-end">Home</h4>
                 <div class="card">
-                <img class="card-img-top" src="images/panda.jpg" alt="image_here" style="height: 70vh;">
+                <img class="card-img-top" src="/images/panda.jpg" alt="image_here" style="height: 70vh;">
                 <div class="card-img-overlay">
                     <h6 class="card-title">NEW SERVICE ENHANCEMENTS EFFECTIVE FROM 12TH JULY 2025 AT HEMARA MOTEL</h6>
-                <p class="card-text text-white">Enjoy 30% off<br> <strong >our hotel Rooms.</strong></p>
+                <p class="card-text text-white">Enjoy 20% off<br> <strong >our hotel Rooms.</strong></p>
                      <p class="card-text text-white d-flex justify-content-center"><strong>
                        COMFORT<br>
                        HAS NEVER <br>
@@ -123,50 +213,109 @@
                     <a href="#contact" ><button type="button" class="card-text text-white bg-danger">BOOK NOW</button></a>
            </div>
            </div>
+        </div>
+             <div id="restaurant" class="container-fluid text-white my-2 py-1">
+                <h4>Restaurant Services</h4>
+                <p>All meals and drinks will now be prepared strictly based on your preferences - ensuring every plate
+                    and glass meets your <strong> taste,dietary and cultural needs.</strong>
+                </p>
+                <div class="container-fluid mt-3">
+                    <div class="d-flex">
+                        <div class="p-2 flex-fill bg-info">image1</div>
+                        <div class="p-2 flex-fill bg-warning">image2</div>
+                        <div class="p-1 flex-fill bg-primary">image3</div>
                     </div>
-             <div id="restaurant" class="container bg-success text-white">
-                <h4>Restaurant</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     At ducimus molestias qui, perferendis, aliquid quis ipsum voluptatum 
-                     cupiditate non voluptate tempore fuga beatae fugit quasi alias a. Ratione, 
-                     beatae quibusdam.</p>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est rem laudantium error 
-                        optio neque ab repudiandae officia voluptas incidunt ex inventore
-                         placeat repellendus quasi, commodi, accusamus vero eos, qui id?</p>
+                </div>
             </div>
-             <div id="conference" class="container bg-danger mb-2 text-white">
-                <h4 class="d-flex justify-content-center">Conference</h4>
-                <div class="row">
-                    <div class="col-sm-3">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     At ducimus molestias qui,</p>
+             <div id="conference" class="container-fluid my-2 text-white border  rounded-1">
+                <h4 class="d-flex justify-content-end">Conference</h4>
+                <div class="row g-1">
+                    <div class="col-sm-7">
+                        <h3  style="font-style: italic;text-decoration: underline;">Groups & Social Meetings</h3>
+                        <h6 class="d-flex justify-content-center">Your Space, Your Way</h6>
+                    <ul class="list-group mb-2">
+                            <li class="list-group-item list-group-item-success "><ol><li>Groups upto 20 pax: Free space offered</li>
+                            <li>Groups betwween 20-30 pax:Enjoy free space for the first 3 hours; thereafter, a small service fee of ksh.1,000/hour applies</li>
+                            <li>Groups above 30 pax: Booking fee of ksh.3,00 payable in advance to secure your space.Ideal for birthdays,chamas, small weddings & reunions!</li>
+                        </ol>
+                            <li class="list-group-item list-group-item-warning mt-1">
+                                <ol>
+                                    <li class="d-flex justify-content-center"><h6 style="font-style: italic; color: #173339 !important;">Trainings & Capacity-Building Events
+                                        <br> <span  class="d-flex justify-content-center" style="color: #fe0f0f;">Fully Equipped Halls</span>
+                                    </h6></li>
+                                    <li>We offer well-furnished halls with capacity for 30 - 200 pax, suitable for:
+                                        <ul>
+                                            <li>Corporate Trainings</li>
+                                            <li>Religious seminars</li>
+                                            <li>Community development workshops</li>
+                                        </ul>
+                                        <li class="d-flex justify-content-start"><h6>Book at least 7 days in advance for customized arrangements</h6></li>
+                                    </li>
+                                </ol>
+                            </li>
+                    </ul>
+                
                      </div>
-                     <div class="col-sm-9">
+                     <div class="col-sm-5">
                         <div class="fakeimg"></div>
-                     <p>perferendis, aliquid quis ipsum voluptatum 
-                     cupiditate non voluptate tempore fuga beatae fugit quasi alias a. Ratione, 
-                     beatae quibusdam.</p>
+                        <h6 class="d-flex justify-content-center mt-1">HEMARA MOTEL HALLS</h6>
+                        
+                    
                      </div>
             </div>
             </div>
-             <div id="rooms" class="container bg-success text-white">
-                <h4>Rooms</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     At ducimus molestias qui, perferendis, aliquid quis ipsum voluptatum 
-                     cupiditate non voluptate tempore fuga beatae fugit quasi alias a. Ratione, 
-                     beatae quibusdam.</p>
+             <div id="accomodation" class="container-fluid border border-danger rounded-1 mb-2 p-2 text-white">
+                <h4>Accomodation </h4>
+                <h6 class="d-flex justify-content-center">Comfort at a Discount</h6>
+                    <div class="d-flex mt-1">
+                        <div class="p-1 flex-fill bg-info" style="height: 200px;">Image</div>
+                        <div class="p-1 flex-fill bg-warning">Image</div>
+                    </div>
+                    <div class="container-fluid mt-1">
+                    <div class="row d-flex align-content-baseline ">
+                        <div class="col-sm-7 g-1  bg-success" style="height: 200px;">image</div>
+                        <div class="col-sm-5"><p>Enjoy your stay in our cozy rooms with a flat 20% discount on all room charges above ksh. 1500.</p>
+                        <hr>
+                        Plus,receive a free serving of traditional vegetables like murende with every qualifying stay!
+                        </div>
+                    </div>
+                    </div>
+
+                <p></p>
             </div>
-             <div id="contact" class="container bg-success text-white">
-                <h4>Contact</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     At ducimus molestias qui, perferendis, aliquid quis ipsum voluptatum 
-                     cupiditate non voluptate tempore fuga beatae fugit quasi alias a. Ratione, 
-                     beatae quibusdam.</p>
+             <div id="contact" class="container-fluid mb-2 pb-1">
+                <h4 class="d-flex justify-content-center me-2">Contact US</h4>
+                    <form action=="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="68bb00f9-21af-4e75-a575-9bfa8ac623e8">
+                        <div class="input-group mb-3 mt-1">
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name..." name="name" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control rounded-end" name="email" id="email"required placeholder="johndoe@gmail.com" />
+                            <div class="valid-feedback">valid.</div>
+                            <div class="invalid-feedback">Please fill out this form</div>
+                        </div>
+                        <div class="form-group">
+                          <label for="">Comment:</label>
+                          <textarea class="form-control" name="comment" id="comment" placeholder="Reach us here..." rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn submit my-2">Submit</button>
+                    </form>
             </div>
         </body>
     </div>
     <div class="container-fluid mt-1 bg-dark text-white">
-        <p>footer</p>
+        <div class="row row-cols-2">
+            <div class="col-6 phone mt-2"><span class="fa fa-phone"></span>(+254)703-756-191</div>
+            <div class="col-6 phone mt-2"><span class="fa fa-phone"></span>(+254)714-364-402</div>
+        </div>
+        <hr>
+        <div class="row row-cols-3 ">
+            <div class="col-sm-4 d-flex justify-content-center my-2"><a href="#" class="fa fa-instagram fa-2x"></a></div>
+            <div class="col-sm-4 d-flex justify-content-center my-2"><a href="#" class="fa fa-facebook fa-2x"></a></div>
+            <div class="col-sm-4 d-flex justify-content-center my-2"><a href="#" class="fa fa-whatsapp fa-2x"></a></div>
+        </div>
   </div>
 </body>
 </html>
