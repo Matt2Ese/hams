@@ -15,11 +15,21 @@
         margin: 0;
         padding: 0;
     }
+    p{
+        font-family:Arial, Helvetica, sans-serif;
+    }
     body{
         position: relative;
     }
     .head_title{
             background-image: repeating-linear-gradient(90deg, rgb(50, 50, 50) 20%, rgb(20, 20, 20),30%, rgb(36, 36, 36) 40%);
+    }
+    #img_main img{
+        position:relative;
+        clip-path:polygon(0% 0%,50% 60% , 100% 1000%, 100% 0%);
+    }
+    #img_sec{
+        position: absolute;
     }
     h2{
         color:chartreuse;
@@ -35,16 +45,13 @@
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         text-transform: uppercase;
         color: #c8f4fe;
-        font-size: large;
+        font-size: 1.5rem;
         text-decoration: none;
         color: rgb(231, 22, 22) !important;
     }
     a{
-        font-size:16px;
-        color: #411b8d;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         text-decoration: none;
-        padding: 3px;
         transition: color 1s;
     }
     a:hover,a:focus{
@@ -53,7 +60,6 @@
     .nav-link,a{
         color: rgb(236, 244, 250);
         transition-timing-function: ease-in;
-        font-size:20px ;
         transition: font-size 2s;
         transition-duration: 3sec;
         font-size: 1.5vw;
@@ -62,8 +68,16 @@
     }
     .nav-link:hover{
         color:aqua;
-        font-size: 1.6vw;
-     
+        font-size: 1.3rem;
+    }
+    .nav-item a{
+        font-size: 1.25rem;
+    }
+    a:active{
+        color:#1877f2
+    }
+    hr{
+        border-top: 2px dashed rgb(0, 204, 255);
     }
     .fakeimg{
         height: 200px;
@@ -72,6 +86,8 @@
     }
     .card-text{
         text-transform: uppercase;
+        text-decoration: none;
+        color: #ffffff;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     }
     button.card-text{
@@ -112,7 +128,18 @@
         text-decoration: none;
     }
     #comment{
-        background: red;
+        background: rgb(21, 21, 0);
+    }
+    .maps{
+        margin: 0;
+        padding: 2px;
+        border:none;
+        border-radius: 30px;
+    }
+    iframe{
+        margin: 0;
+        border-radius: 50px;
+        box-shadow: none;
     }
 
 /**socials**/
@@ -195,11 +222,11 @@
             </nav>
             <div id="home" class="container-fluid my-1 py-1 text-white rounded-1">
                 <h4 class="d-flex justify-content-end">Home</h4>
-                <div class="card">
+                    <div class="card">
                 <img class="card-img-top" src="/images/panda.jpg" alt="image_here" style="height: 70vh;">
                 <div class="card-img-overlay">
                     <h6 class="card-title">NEW SERVICE ENHANCEMENTS EFFECTIVE FROM 12TH JULY 2025 AT HEMARA MOTEL</h6>
-                <p class="card-text text-white">Enjoy 20% off<br> <strong >our hotel Rooms.</strong></p>
+                <p class="card-text d-flex justify-content-start"><strong>Enjoy 20% off our hotel Rooms.</strong></p>
                      <p class="card-text text-white d-flex justify-content-center"><strong>
                        COMFORT<br>
                        HAS NEVER <br>
@@ -208,9 +235,7 @@
                        STARTING JUNE 20TH,2025
                        </strong>
                      </p>
-                     <div class="container-fluid">
-                    <a href="#contact" ><button type="submit" class=" card-text submit my-2">BOOK NOW</button></a>
-                        </div>
+                    <a href="#contact" ><button type="submit" class=" card-text submit my-1 d-flex flex-wrap justify-content-start">BOOK NOW</button></a>
                 </div>
            </div>
         </div>
@@ -273,7 +298,7 @@
                     <div class="container-fluid mt-1">
                     <div class="row d-flex align-content-baseline ">
                         <div class="col-sm-7 g-1  bg-success" style="height: 200px;">image</div>
-                        <div class="col-sm-5"><p>Enjoy your stay in our cozy rooms with a flat 20% discount on all room charges above ksh. 1500.</p>
+                        <div class="col-sm-5 mt-2"><p>Enjoy your stay in our cozy rooms with a flat 20% discount on all room charges above ksh. 1500.</p>
                         <hr>
                         Plus,receive a free serving of traditional vegetables like murende with every qualifying stay!
                         </div>
@@ -282,14 +307,14 @@
 
                 <p></p>
             </div>
-             <div id="contact" class="container-fluid mb-2 pb-1">
+             <div id="contact" class="container-fluid my-1 pb-1">
                 <h4 class="d-flex justify-content-center me-2">Contact US</h4>
                     <form action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="cbc6c0ea-43ad-499b-a7bd-46afb53577bf">
                         <div class="input-group mb-3 mt-1">
                             <input type="text" class="form-control" id="name" placeholder="Enter your name..." name="name" required>
                         </div>
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-1">
                             <span class="input-group-text">@</span>
                             <input type="text" class="form-control rounded-end" name="email" id="email"required placeholder="johndoe@gmail.com" />
                             <div class="valid-feedback">valid.</div>
@@ -304,6 +329,14 @@
             </div>
         </body>
     </div>
+    <div class="container-fluid d-flex justify-content-center bg-dark">
+        <h4 class="text-white">Visit us:</h4>
+        <div class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8102980765457!2d34.727411273103925!3d0.11489726430422632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17800e2d576a0eff%3A0x217df98fe2cd1afc!2sHAMS%20HOTEL!5e0!3m2!1sen!2ske!4v1751804258911!5m2!1sen!2ske" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+        </div>
+</div>
     <div class="container-fluid mt-1 bg-dark text-white">
         <div class="row">
             <div class="col-sm-4 phone mt-2 d-flex flex-wrap justify-content-center"><span class="fa fa-phone"></span><a href="tel:+254703756191">(+254)703-756-191</a></div>
@@ -312,9 +345,9 @@
         </div>
         <hr>
         <div class="row row-cols-3 g-1">
-            <div class="col-sm-4 instagram d-flex flex-wrap justify-content- mb-1"><a href="#" class="fa fa-instagram fa-2x"></a></div>
-            <div class="col-sm-4 facebook d-flex flex-wrap justify-content-center mb-1"><a href="#" class="fa fa-facebook fa-2x"></a></div>
-            <div class="col-sm-4 whatsapp d-flex flex-wrap justify-content-center mb-1"><a href="#" class="fa fa-whatsapp fa-2x"></a></div>
+            <div class="col-sm-4 instagram d-flex flex-wrap justify-content- mb-1"><a href="https://www.instagram.com/hemara_motel?igsh=dnIwMGtoNzBtcGhm" class="fa fa-instagram fa-2x"></a></div>
+            <div class="col-sm-4 facebook d-flex flex-wrap justify-content-center mb-1"><a href="https://www.facebook.com/groups/1835305440672855/user/61578062972391" class="fa fa-facebook fa-2x"></a></div>
+            <div class="col-sm-4 whatsapp d-flex flex-wrap justify-content-center mb-1"><a href="https://wa.me/+254797566655>" class="fa fa-whatsapp fa-2x"></a></div>
         </div>
   </div>
 </body>
