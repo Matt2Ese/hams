@@ -86,16 +86,16 @@
     padding: 2px;
    }
     h5{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 3vw;
-        color: rgb(220, 89, 33);
+        color: rgb(255, 255, 255);
     }
     h6{
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         text-transform: uppercase;
         text-align: center;
         font-size: 1.5rem;
-        text-decoration: none;
+        text-decoration:none;
     }
     a{
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -140,6 +140,10 @@
     #restaurant{
         border-radius: 10px;
         box-shadow: 1px 2px 10px 1px rgb(88, 60, 60); 
+    }
+    .list-group li{
+        font-size: 1.25rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     /*Contact form*/
     #name {
@@ -222,6 +226,7 @@
             background-image: linear-gradient(270deg,red,rgb(100, 190, 229));
             box-shadow: 2px px 10px rgb(100, 190, 229);
        }
+     
        /**media queries**/
        @media screen and (max-width:520px) {
             .conference img{
@@ -232,20 +237,22 @@
             .conference img:hover{
                 width: 75%;
             }
-        .nav-link,a{
-        font-size: 1.5vw;
-        margin: 0;
-        padding: 0;
-        
+            .nav-link:hover{
+                color:aqua;
+                font-size: 1.1rem;
+            }
+            .nav-item a{
+                font-size: 1rem;
+                padding: 1px;
+             }  
+               .contact a{
+                font-size: 1.2rem;
+            }
+        h5{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 3vw;
+        color: rgb(255, 255, 255);
     }
-    .nav-link:hover{
-        color:aqua;
-        font-size: 1.1rem;
-    }
-    .nav-item a{
-        font-size: 1rem;
-        padding: 1px;
-    }  
        }
 </style>
 </head>
@@ -313,7 +320,7 @@
                                     <img src="images/chapati.jpg" alt="chapati" class="d-block">
                                 </div>
                             </div>
-                           <h5 class="py-2 text-danger">NEW SERVICE ENHANCEMENTS EFFECTIVE FROM 12 TH JULY 2025 AT HEMARA MOTEL</h5>
+                           <h5 class="py-2">NEW SERVICE ENHANCEMENTS EFFECTIVE FROM 12 TH JULY 2025 AT HEMARA MOTEL</h5>
                         </div>
                     </div>
                     <div class="col-4">
@@ -343,18 +350,18 @@
                     </div>
                 </div>
             </div>
-             <div id="conference" class="container-fluid my-2 text-white border rounded-1">
+             <div id="conference" class="container-fluid my-2 text-white border  rounded-1">
                 <h4 class="d-flex justify-content-end mt-2">Conference</h4>
                 <div class="row g-1">
                     <div class="col-sm-7">
                         <h3  style="font-style: italic;text-decoration: underline;">Groups & Social Meetings</h3>
-                        <h6 class="d-flex justify-content-center">Your Space, Your Way</h6>
+                        <h6 class="d-flex justify-content-center text-success">Your Space, Your Way</h6>
                     <ul class="list-group mb-2">
                             <li class="list-group-item list-group-item-success "><ol><li>Groups upto 20 pax: Free space offered.</li>
-                            <li>Groups betwen 20-30 pax:Enjoy free space for the first 3 hours; thereafter, a small service fee of ksh.1,000/hour applies.</li>
+                            <li>Groups betwen 20-30 pax: Enjoy free space for the first 3 hours; thereafter, a small service fee of ksh.1,000/hour applies.</li>
                             <li>Groups above 30 pax: Booking fee of ksh.3,00 payable in advance to secure your space. Ideal for birthdays,chamas, small weddings & reunions!</li>
                         </ol>
-                            <li class="list-group-item list-group-item-warning mt-1">
+                            <li class="list-group-item list-group-item-success mt-1">
                                 <ol>
                                     <li class="d-flex justify-content-center"><h6 style="font-style: italic; color: #173339 !important;">Trainings & Capacity-Building Events
                                         <br> <span  class="d-flex justify-content-center" style="color: #fe0f0f;">Fully Equipped Halls</span>
@@ -379,7 +386,7 @@
                      </div>
             </div>
             </div>
-             <div id="accomodation" class="container-fluid border border-danger rounded-1 mb-2 p-2 text-white">
+             <div id="accomodation" class="container-fluid border rounded-1 mb-2 p-2 text-white">
                 <h4>Accomodation </h4>
                 <h6 class="d-flex justify-content-center">Comfort at a Discount</h6>
                     <div class="d-flex mt-1 accomodation">
@@ -407,7 +414,7 @@
                         </div>
                         <div class="input-group mb-1">
                             <span class="input-group-text">@</span>
-                            <input type="text" class="form-control rounded-end" name="email" id="email"required placeholder="johndoe@gmail.com" />
+                            <input type="text" class="form-control rounded-end" name="email" id="email"required placeholder="mail@gmail.com" />
                             <div class="valid-feedback">valid.</div>
                             <div class="invalid-feedback">Please fill out this form</div>
                         </div>
@@ -421,15 +428,14 @@
         </body>
     </div>
     <div class="container-fluid d-flex justify-content-center bg-dark">
-        <h4 class="text-white">Visit us:</h4>
+        <h4 class="text-white py-1 mt-1" style="font-size: 1rem; color: #ff0000 !important;">Visit us:</h4>
         <div class="maps">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8102980765457!2d34.727411273103925!3d0.11489726430422632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17800e2d576a0eff%3A0x217df98fe2cd1afc!2sHAMS%20HOTEL!5e0!3m2!1sen!2ske!4v1751804258911!5m2!1sen!2ske" 
         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
         </div>
 </div>
     <div class="container-fluid mt-1 bg-dark text-white">
-        <div class="row">
+        <div class="row contact">
             <div class="col-sm-4 phone mt-2 d-flex flex-wrap justify-content-center"><span class="fa fa-phone"></span><a href="tel:+254703756191">(+254)703-756-191</a></div>
             <div class="col-sm-4 phone mt-2 d-flex flex-wrap justify-content-center"><span class="fa fa-phone"></span><a href="tel:+254714364402">(+254)724-364-402</a></div>
             <div class="col-sm-4 phone mt-2 d-flex flex-wrap justify-content-center align-content-start"><span class="fa fa-envelope"></span><a href="mailto:motelhemara@gmail.com">motelhemara@gmail.com</a></div>
@@ -438,7 +444,7 @@
         <div class="row row-cols-3 g-1">
             <div class="col-sm-4 instagram d-flex flex-wrap justify-content- mb-1"><a href="https://www.instagram.com/hemara_motel?igsh=dnIwMGtoNzBtcGhm" class="fa fa-instagram fa-2x"></a></div>
             <div class="col-sm-4 facebook d-flex flex-wrap justify-content-center mb-1"><a href="https://www.facebook.com/groups/1835305440672855/user/61578062972391" class="fa fa-facebook fa-2x"></a></div>
-            <div class="col-sm-4 whatsapp d-flex flex-wrap justify-content-center mb-1"><a href="https://wa.me/+254797566655>" class="fa fa-whatsapp fa-2x"></a></div>
+            <div class="col-sm-4 whatsapp d-flex flex-wrap justify-content-center mb-1"><a href="https://wa.me/+254703756191>" class="fa fa-whatsapp fa-2x"></a></div>
         </div>
   </div>
 </body>
