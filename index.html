@@ -24,7 +24,11 @@
     .head_title{
             background-image: repeating-linear-gradient(90deg, rgb(50, 50, 50) 20%, rgb(20, 20, 20),30%, rgb(36, 36, 36) 40%);
     }
-  
+    .card img {
+        height: auto;
+        width: auto;
+        box-shadow: 5px 10px 20px rgb(130, 108, 108) inset;
+    }
     h2{
         color:chartreuse;
         font-family: 'Courier New', Courier, monospace;
@@ -81,7 +85,7 @@
     .card-text{
         text-transform: uppercase;
         text-decoration: none;
-        color: #ffffff;
+        color: #459d2c;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     }
     button.card-text{
@@ -193,7 +197,7 @@
     </div>
     <div class="home container-fluid bg-dark text-white">
         <body data-bs-spy="scroll"data-bs-target=".navbar" data-bs-offset="10">
-            <nav class="navbar navbar-expand-sm nav-bar bg-gray text-bg-danger sticky-top py-sm-0 py-md-1">
+            <nav class="navbar navbar-expand-sm nav-bar bg-gray text-bg-danger sticky-top py-sm-0  py-md-2">
                 <div class="container-fluid justify-content-center">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -214,14 +218,32 @@
                     </ul> 
                 </div>
             </nav>
-            <div id="home" class="container-fluid my-1 py-1 text-white rounded-1">
+            <div id="home" class="container-fluid mt-1">
                 <h4 class="d-flex justify-content-end">Home</h4>
-                    <div class="card">
-                <img class="card-img-top" src="images/panda.jpg" alt="image_here" style="height: 70vh;">
-                <div class="card-img-overlay">
-                    <h6 class="card-title">NEW SERVICE ENHANCEMENTS EFFECTIVE FROM 12TH JULY 2025 AT HEMARA MOTEL</h6>
-                <p class="card-text d-flex justify-content-start"><strong>Enjoy 20% off our hotel Rooms.</strong></p>
-                     <p class="card-text text-white d-flex justify-content-center"><strong>
+                <div class="row row-cols-2 g-1">
+                    <div class="col-6 d-flex flex-wrap justify-content-center">
+                        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                            <br>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/chapati.jpg" alt="chapati" class="d-block" style="width: 200px; height: 100px;">
+                                    <div class="carousel-caption">
+                                        <h3>new offer</h3>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/conference.jpg" alt="conference" class="d-block" style="width: 200px; height: 100px;">
+                                </div>
+                                 <div class="carousel-item">
+                                    <img src="images/restaurant.jpg" alt="conference" class="d-block" style="width: 200px; height: 100px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex flex-wrap justify-content-center ">
+                        <h5>NEW SERVICE ENHANCEMENTS EFFECTIVE FROM 12 TH JULY 2025 AT HEMARA MOTEL</h5>
+                         <p class="card-text d-flex justify-content-start"><strong>Enjoy 20% off our hotel Rooms.</strong></p>
+                     <p class="card-text d-flex justify-content-center"><strong>
                        COMFORT<br>
                        HAS NEVER <br>
                        BEEN THIS<br>
@@ -229,9 +251,9 @@
                        STARTING JUNE 20TH,2025
                        </strong>
                      </p>
-                    <a href="#contact" ><button type="submit" class=" card-text submit my-1 d-flex flex-wrap justify-content-start">BOOK NOW</button></a>
+                     <a href="#contact" ><button type="submit" class="submit my-1 d-flex flex-wrap">BOOK NOW</button></a>
+                    </div>
                 </div>
-           </div>
         </div>
              <div id="restaurant" class="container-fluid text-white my-2 py-1">
                 <h4>Restaurant Services</h4>
