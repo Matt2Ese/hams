@@ -25,16 +25,65 @@
             background-image: repeating-linear-gradient(90deg, rgb(50, 50, 50) 20%, rgb(20, 20, 20),30%, rgb(36, 36, 36) 40%);
     }
     #hams img {
-    
         width: 50vw;
         box-shadow: 0px 0px 2px 1px rgb(37, 35, 35)inset ;
         border: none;
         border-radius: 50px;
     }
+    .restaurant img{
+            width: 20vw;
+            border: none;
+            box-shadow: 1px 2px 10px 1px rgb(19, 17, 17);
+            border-radius: 25px;
+            transition: width 1s;
+    }
+    .restaurant img:hover{
+        width: 22vw;
+        box-shadow:  1px 2px 10px 1px rgb(56, 53, 53);
+    }
+    .conference img{
+            width: 30vw;
+            border: none;
+            box-shadow: 1px 2px 10px 1px rgb(19, 17, 17);
+            border-radius: 25px;
+            transition: width 1s;
+    }
+    .conference img:hover{
+         width: 27vw;
+        box-shadow:  1px 2px 10px 1px rgb(56, 53, 53);
+    }
+    .accomodation img{
+             width: 35vw;
+            border: none;
+            box-shadow: 1px 2px 10px 1px rgb(19, 17, 17);
+            border-radius: 25px;
+            transition: width 1s;
+    }
+    .accomodation2 img{
+            width: 35vw;
+            border: none;
+            box-shadow: 1px 2px 10px 1px rgb(19, 17, 17);
+            border-radius: 25px;
+            transition: width 1s;
+    }
+    .carousel{
+        border: none;
+        padding: 10px;
+        box-shadow:0px 0px 10px rgb(53,47,47)
+    }
     h2{
         color:chartreuse;
         font-family: 'Courier New', Courier, monospace;
         text-shadow: 1.5px 1px  rgba(44, 229, 7, 0.6);
+   }
+   h3{
+    text-transform: uppercase;
+    text-align:center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.25rem;
+    text-decoration:underline dotted 2px red;
+    text-underline-offset: 3px;
+    padding: 2px;
    }
     h5{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -44,10 +93,9 @@
     h6{
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         text-transform: uppercase;
-        color: #c8f4fe;
+        text-align: center;
         font-size: 1.5rem;
         text-decoration: none;
-        color: rgb(231, 22, 22) !important;
     }
     a{
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -79,13 +127,8 @@
     hr{
         border-top: 2px dashed rgb(0, 204, 255);
     }
-    .fakeimg{
-        height: 200px;
-        background: gray;
-        width: 30vw;
-    }
-   
     button.submit{
+        margin-left: 10px;
         padding:2px;
         transition: box-shadow 0.7s;
         transition-timing-function: ease-in-out;
@@ -95,8 +138,7 @@
     }
     #restaurant{
         border-radius: 10px;
-        box-shadow: 1px 2px 10px 1px rgb(88, 60, 60);
-    
+        box-shadow: 1px 2px 10px 1px rgb(88, 60, 60); 
     }
     /*Contact form*/
     #name {
@@ -136,9 +178,7 @@
         border-radius: 50px;
         box-shadow: none;
     }
-
-/**socials**/
-        
+/**socials**/        
        .fa-facebook{
             background: #1877f2;
             color: white;
@@ -181,13 +221,26 @@
             background-image: linear-gradient(270deg,red,rgb(100, 190, 229));
             box-shadow: 2px px 10px rgb(100, 190, 229);
        }
+       /**media queries**/
+       @media screen and (max-width:520px) {
+            .conference img{
+                width: 70% ;
+                background: yellow;
+                transition: width 1s;
+            }
+            .conference img:hover{
+                width: 75%;
+            }
+
+        
+       }
 </style>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
     <div class="head_title container-fluid text-white p-1">
-        <h2 class="d-flex justify-content-center p-1 m-0">HEMARA MOTEL LTD</h2>
+        <h2 class="d-flex justify-content-center p-1">HEMARA MOTEL LTD</h2>
         <h5 class="d-flex justify-content-center">Experience Hospitality Tailored to You</h6>
     </div>
     </div>
@@ -218,7 +271,7 @@
             <div id="home" class="container-fluid mt-1">
                 <h4 class="d-flex justify-content-end">Home</h4>
                 <div class="row row-cols-2 g-1">
-                    <div class="col-8 d-flex flex-wrap justify-content-center">
+                    <div class="col-8 d-flex flex-wrap justify-content-center ">
                         <div id="hams" class="carousel slide" data-bs-ride="carousel">
                             <br>
                             <div class="carousel-inner">
@@ -247,13 +300,12 @@
                                     <img src="images/chapati.jpg" alt="chapati" class="d-block">
                                 </div>
                             </div>
-                           <h5 class="py-2">NEW SERVICE ENHANCEMENTS EFFECTIVE FROM 12 TH JULY 2025 AT HEMARA MOTEL</h5>
+                           <h5 class="py-2 text-danger">NEW SERVICE ENHANCEMENTS EFFECTIVE FROM 12 TH JULY 2025 AT HEMARA MOTEL</h5>
                         </div>
                     </div>
-                    <div class="col-4  d-flex flex-wrap justify-content-center ">
-                        
-                         <p class="card-text d-flex justify-content-start text-danger"><strong>Enjoy 20% off our hotel Rooms.</strong></p>
-                     <p class="card-text d-flex justify-content-center"><strong>
+                    <div class="col-4">
+                         <h3 class="d-flex flex-wrap justify-content-center text-danger">Enjoy 20% off our hotel Rooms.</h3>
+                         <p class="d-flex justify-content-center"><strong>
                        COMFORT<br>
                        HAS NEVER <br>
                        BEEN THIS<br>
@@ -271,15 +323,15 @@
                     and glass meets your <strong> taste,dietary and cultural needs.</strong>
                 </p>
                 <div class="container-fluid mt-3">
-                    <div class="d-flex">
-                        <div class="p-2 flex-fill bg-info">image1</div>
-                        <div class="p-2 flex-fill bg-warning">image2</div>
-                        <div class="p-1 flex-fill bg-primary">image3</div>
+                    <div class="d-flex restaurant">
+                        <div class="p-2 flex-fill flex-wrap rounded rounded-1"><img src="images/restaurant.jpg" alt="restaurant" class="d-block"></div>
+                        <div class="p-2 flex-fill "><img src="images/mrenda.jpg" alt="mrenda" class="d-block"></div>
+                        <div class="p-1 flex-fill"><img src="images/chapati.jpg" alt="chapati" class="d-block"></div>
                     </div>
                 </div>
             </div>
-             <div id="conference" class="container-fluid my-2 text-white border  rounded-1">
-                <h4 class="d-flex justify-content-end">Conference</h4>
+             <div id="conference" class="container-fluid my-2 text-white border rounded-1">
+                <h4 class="d-flex justify-content-end mt-2">Conference</h4>
                 <div class="row g-1">
                     <div class="col-sm-7">
                         <h3  style="font-style: italic;text-decoration: underline;">Groups & Social Meetings</h3>
@@ -306,24 +358,24 @@
                             </li>
                     </ul>
                      </div>
-                     <div class="col-sm-5">
-                        <div class="fakeimg"></div>
-                        <h6 class="d-flex justify-content-center mt-1">HEMARA MOTEL HALLS</h6>
-                        
-                    
+                     <div class="col-sm-5 conference">
+                         <h6 class="d-flex justify-content-center mt-1">HEMARA MOTEL CONFERENCE</h6>
+                        <div class="p-2 flex-fill d-flex justify-content-center flex-wrap"><img src="images/conference.jpg" alt="conference" class="d-block"></div>
+                        <div class="p-2 flex-fill d-flex justify-content-center flex-wrap "><img src="images/conference3.jpg" alt="halls" class="d-block"></div>
+                        <div class="p-1 flex-fill d-flex justify-content-center flex-wrap"><img src="images/conference_2.jpg" alt="chavakali" class="d-block"></div>
                      </div>
             </div>
             </div>
              <div id="accomodation" class="container-fluid border border-danger rounded-1 mb-2 p-2 text-white">
                 <h4>Accomodation </h4>
                 <h6 class="d-flex justify-content-center">Comfort at a Discount</h6>
-                    <div class="d-flex mt-1">
-                        <div class="p-1 flex-fill bg-info" style="height: 200px;">Image</div>
-                        <div class="p-1 flex-fill bg-warning">Image</div>
+                    <div class="d-flex mt-1 accomodation">
+                        <div class="p-1 flex-fill d-flex justify-content-center"><img src="images/rooms.jpg" alt="chavakali" class="d-block"></div>
+                        <div class="p-1 flex-fill"><img src="images/rooms2.jpg" alt="vihiga" class="d-block"></div>
                     </div>
                     <div class="container-fluid mt-1">
-                    <div class="row d-flex align-content-baseline ">
-                        <div class="col-sm-7 g-1  bg-success" style="height: 200px;">image</div>
+                    <div class="row d-flex align-content-baseline accomodation2 ">
+                        <div class="col-sm-7 d-flex justify-content-center g-1"><img src="images/rooms.jpg" alt="vihiga" class="d-block"></div>
                         <div class="col-sm-5 mt-2"><p>Enjoy your stay in our cozy rooms with a flat 20% discount on all room charges above ksh. 1500.</p>
                         <hr>
                         Plus,receive a free serving of traditional vegetables like murende with every qualifying stay!
